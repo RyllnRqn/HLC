@@ -1,0 +1,120 @@
+*{
+    margin: 0;
+    border: 0;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    
+}
+
+
+header {
+    position: fixed;
+    width: 100%;
+    background: transparent;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 100;
+    padding: 5px 40px;
+}
+
+.nav1{
+    padding-right:100px;
+}
+
+.nav1 a{
+    position: relative;
+    font-size: 20px;
+    color: #feee77ef ;
+    font-weight: 500;
+    text-decoration: none;
+    margin-left: 200px;
+}
+
+.nav1 a::before{
+    content: '';
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 0;
+    height: 2px;
+    background: #f8db02ef;
+    transition: .3s;
+}
+
+.nav1 a:hover::before{
+    width: 100%;
+}
+
+
+#sec1{
+    
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 95vh;
+    background-image: url('choir1.jpg');
+    opacity: 80%; 
+}
+
+.anim{
+    display: flex;  
+    justify-content: center;
+    align-items: center;
+    
+}
+
+.line {
+    
+    display: flex;
+    position: relative;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 30px;
+    color: white;
+    flex-direction: column;   
+    height: 200px;
+}
+
+h1{
+    text-shadow: black 5px 5px 10px;
+}
+
+button{
+    height: 50px;
+    width: 300px;
+    background-color: #ffe100;
+    font-size: 15px;
+    font-weight:600;
+    font-family:Verdana;
+    color: white;
+    border-radius: 10px;   
+}
+
+button:hover{
+    height: 50px;
+    width: 300px;
+    background-color: #ffe100;
+    font-size: 15px;
+    font-weight:600;
+    font-family:Verdana;
+    color: black;
+    border-radius: 10px; 
+    border: solid white 2px;
+}
+
+
+
+.secsec{
+    background-color: rgba(255, 255, 255, 0.879);
+    height: 90vh;
+}
+
+#sec3{
+    background-color: #f8db02ef;
+    height: 90vh;
+}
+
+#sec4{
+    background-color: rgba(255, 255, 255, 0.879);
+    height: 50vh;
+}
