@@ -5,116 +5,250 @@
     
 }
 
+body{
+    position: relative;
+    
+}
 
-header {
-    position: fixed;
-    width: 100%;
-    background: transparent;
+header{
     display: flex;
     justify-content: space-between;
     align-items: center;
-    z-index: 100;
-    padding: 5px 40px;
+    height: 90px;
+    padding: 0 30px 0 10px;
+    background: black;
 }
 
-.nav1{
-    padding-right:100px;
+header nav{
+    display: flex;
+    gap: 50px; 
 }
 
-.nav1 a{
-    position: relative;
-    font-size: 20px;
-    color: #feee77ef ;
-    font-weight: 500;
+header nav a{
     text-decoration: none;
-    margin-left: 200px;
+    font-size: 17px;
+    font-weight: 600;
+    color: white;
 }
 
-.nav1 a::before{
-    content: '';
-    position: absolute;
-    top: 100%;
-    left: 0;
-    width: 0;
-    height: 2px;
-    background: #f8db02ef;
-    transition: .3s;
+.logo img{
+    position: relative;
+    height: 200px;
+    width: 200px;
 }
 
-.nav1 a:hover::before{
+.section1 {
+    background: url('choir1.jpg')center;
+    height: 100vh;
     width: 100%;
-}
-
-
-#sec1{
+    color: white;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
     
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
-    height: 95vh;
-    background-image: url('choir1.jpg');
-    opacity: 80%; 
 }
 
-.anim{
-    display: flex;  
+.tagLine{
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-self: center;
+    align-items: center;
+    flex-direction: column;
+    z-index: 999; 
+}
+
+.tagLine h1{
+    margin-top: 0;
+    height: 30vh;
+    font-style: italic;
+    text-shadow: 1px 1px 1px black;
+    font-family: "Lobster", sans-serif;
+    font-weight: 600;
+    font-size: 50px;
+    font-style: normal;
+    z-index: -1;
+}
+.tagLine button{ 
+    
+    height: 40px;
+    width: 250px;
+    font-weight: 600;
+    font-size: 18px;
+    border-radius: 9px;
+    box-shadow: 1px 1px 2px rgb(97, 96, 96);
+    background-color: yellow;
+    color:rgb(94, 23, 161);
+    z-index: -1;
+}
+
+
+.about{
+    position: relative;
+    padding: 100px;
+    z-index: 999;
+    background:antiquewhite;
+
+}
+
+.about h1{
+    font-size: 100px;
+}
+
+.con-about{
+    height: 70vh;
+    display: flex;
+    position: relative;
+    justify-content: space-evenly; 
+}
+
+.con-about .cont {
+    margin: 50px 100px;
     justify-content: center;
     align-items: center;
     
+    
 }
 
-.line {
+.member{
+    position: relative;
+    margin: 0 100px;
+    padding: 0 100px;
+    z-index: 999;
+    background: #fe98c8; 
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 100px;
     
+    
+}
+
+.member1 img{
+    height: 50vh;
+    border-radius: 10px;
+    border-style: solid;
+    border-width: 3px;
+    border-color: antiquewhite;
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px, rgba(10, 37, 64, 0.35) 0px -2px 6px 0px inset;
+    
+}
+
+.member1 {
     display: flex;
     position: relative;
-    justify-content: space-between;
+    justify-content: center;
     align-items: center;
-    font-size: 30px;
-    color: white;
-    flex-direction: column;   
-    height: 200px;
+    flex-direction: column;
+    gap: 20px;
+    
 }
 
-h1{
-    text-shadow: black 5px 5px 10px;
+.member11 {
+   border-style: solid;
+   border-color: black;
+   border-width: 10px;
+   display:flex;
+   flex-wrap: wrap;
+
 }
 
-button{
-    height: 50px;
-    width: 300px;
-    background-color: #ffe100;
-    font-size: 15px;
-    font-weight:600;
-    font-family:Verdana;
-    color: white;
-    border-radius: 10px;   
+.member11 h1{
+
 }
 
-button:hover{
-    height: 50px;
-    width: 300px;
-    background-color: #ffe100;
-    font-size: 15px;
-    font-weight:600;
-    font-family:Verdana;
-    color: black;
-    border-radius: 10px; 
-    border: solid white 2px;
+.member2{
+    position: relative;
+    z-index: 999;
+    justify-content: center;
+    background-size:cover;
+    height: 100vh;
+    background-image: linear-gradient(180deg,#f0e9ec1b, rgba(233, 224, 224, 0.436)),url('/members/background-members.jpg');
+    display: grid;
+    align-items: center;
+    display: flex;
+    padding-right: 20px;
+    
+    
+}
+
+.member2 .member-title{
+    position: relative;
+    justify-content: center;
+    display: grid;
+    font-size: 2rem;
+    align-items: center;
+    gap: 50px;
+    padding: 50px;
+}
+.member2 .member-title h1{
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    display: inline-table;
+    justify-content: center;
+    align-items: center;
+    position:relative;
+    text-align: center;
+}
+
+.member2 .member-title h2{
+    align-items: center;
+    justify-content: center;
+    position: inherit;
+    display: flex;
+    font-family: sans-serif;
+    font-size: 35px;
+
+}
+
+
+.container{  
+    display: flex;
+    gap: 20px;
+    justify-content: center;
+    padding: 25px 0;
+    overflow-x: scroll;
+    width: 60%;
+}
+
+.container::-webkit-scrollbar{
+    display: none;
 }
 
 
 
-.secsec{
-    background-color: rgba(255, 255, 255, 0.879);
-    height: 90vh;
+
+.profile{
+    text-align: center;
+    box-shadow: rgba(0, 0, 0, 0.5) 0px 4px 20px 7px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-top: 30px;
+    padding-right: 25px;
+    padding-bottom: 30px;
+    padding-left: 25px;
+    gap: 5px;
+  
 }
 
-#sec3{
-    background-color: #f8db02ef;
-    height: 90vh;
-}
+.image-wrap {
+    clip-path: circle(50% at 50% 50%);
+    width: 130px;
+    height: 130px;
+  }
 
-#sec4{
-    background-color: rgba(255, 255, 255, 0.879);
-    height: 50vh;
-}
+  .member-image {
+    max-width: 100%;
+    scale: 1.88;
+  }
+  
+  .member-name{
+        font-family: "Lobster", serif;
+        font-weight: 300;
+        font-style: normal;
+        font-size: larger;
+
+  }
