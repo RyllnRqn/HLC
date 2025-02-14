@@ -166,7 +166,7 @@ header nav a{
     justify-content: center;
     background-size:cover;
     height: 100vh;
-    background-image: linear-gradient(180deg,#f0e9ec1b, rgba(233, 224, 224, 0.436)),url('../members/backgroundmembers.jpg');
+    background-image: url('../members/backgroundmembers.jpg');
     display: grid;
     align-items: center;
     display: flex;
@@ -191,6 +191,10 @@ header nav a{
     align-items: center;
     position:relative;
     text-align: center;
+    color:bisque;
+    -webkit-text-stroke: 1px rgb(0, 145, 255);
+    width: 500px;
+
 }
 
 .member2 .member-title h2{
@@ -252,3 +256,25 @@ header nav a{
         font-size: larger;
 
   }
+
+  .performances{
+    position: relative;
+    z-index: 999;
+    justify-content: space-evenly;
+    background-size:cover;
+    height: 100vh;
+    background-color: rgba(13, 223, 223, 0.467);
+    display: flex;  
+    align-items: center;
+    gap: 100px;
+    padding: 10px;
+}
+
+.performances h1{
+    font-family: sans-serif;
+}
+
+.performances img{
+    height: 250px;
+    width: 100%;
+}

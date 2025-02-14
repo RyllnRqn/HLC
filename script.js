@@ -41,3 +41,13 @@ slider.addEventListener('mousemove' , (e) => {
    const walk = (x - startX) * 1;
    slider.scrollLeft = scrollLeft - walk;
 });
+
+
+/*Musi1.addEventListener("click", function(event){event.preventDefault()
+   document.getElementById("Musi").style.display = "none";});*/
+
+function hideMusi(){
+   event.preventDefault()
+
+   document.getElementById("Musi").style.display = "none";
+}
