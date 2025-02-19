@@ -43,11 +43,36 @@ slider.addEventListener('mousemove' , (e) => {
 });
 
 
-/*Musi1.addEventListener("click", function(event){event.preventDefault()
-   document.getElementById("Musi").style.display = "none";});*/
+/*balik.addEventListener("click", function(event){     event.preventDefault()
+document.getElementsById("church").style.display = "none";});*/
 
-function hideMusi(){
+function hideChurch(){
    event.preventDefault()
 
-   document.getElementById("Musi").style.display = "none";
+   document.getElementById("church").style.display = "none";
 }
+
+function switchSection(showSection, hideSection){
+   hideSection.forEach((section) => {
+      section.classList.add(style="display: none")
+   })
+   showPerformance.classList.add(style="display: block");
+}
+
+.addEventListener("click", function(event){
+   event.preventDefault()
+   switchSection(balikBayan, [Musi, cFo])
+
+})
+
+himig.addEventListener("click", function(event){
+   event.preventDefault()
+   switchSection(Musi, [cFo, balikBayan])
+
+})
+
+evM.addEventListener("click", function(event){
+   event.preventDefault()
+   switchSection(cFo, [balikBayan, Musi])
+
+})

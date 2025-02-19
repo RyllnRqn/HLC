@@ -260,14 +260,26 @@ header nav a{
   .performances{
     position: relative;
     z-index: 999;
-    justify-content: space-evenly;
+    justify-content:center;
     background-size:cover;
     height: 100vh;
     background-color: rgba(13, 223, 223, 0.467);
-    display: flex;  
-    align-items: center;
+    display: grid;  
+    text-align: center;
     gap: 100px;
-    padding: 10px;
+    padding: 100px;
+}
+
+.performances ul{
+    display: flex;
+    gap: 20px;
+    justify-content: center;
+}
+.performances li{
+    list-style-type: none;
+    font-size: 40px;
+    font-style: italic;
+    
 }
 
 .performances h1{
@@ -275,6 +287,14 @@ header nav a{
 }
 
 .performances img{
-    height: 250px;
+    height: 550px;
     width: 100%;
+}
+
+.p-details{
+    position: inherit;
+    display: grid;
+    justify-content: center;
+    text-align: center;
+    gap: 100px;
 }
