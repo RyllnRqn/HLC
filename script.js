@@ -44,35 +44,79 @@ slider.addEventListener('mousemove' , (e) => {
 
 
 /*balik.addEventListener("click", function(event){     event.preventDefault()
-document.getElementsById("church").style.display = "none";});*/
+document.getElementsById("church").style.display = "none";});
 
 function hideChurch(){
    event.preventDefault()
 
    document.getElementById("church").style.display = "none";
-}
+}*/
 
 function switchSection(showSection, hideSection){
    hideSection.forEach((section) => {
-      section.classList.add(style="display: none")
+      section.classList.add("hidden");
    })
-   showPerformance.classList.add(style="display: block");
+   showSection.classList.remove("hidden");
 }
 
-.addEventListener("click", function(event){
+balik.addEventListener("click", function(event){
    event.preventDefault()
-   switchSection(balikBayan, [Musi, cFo])
+   switchSection(bayan, [musi, church])
 
 })
 
 himig.addEventListener("click", function(event){
    event.preventDefault()
-   switchSection(Musi, [cFo, balikBayan])
+   switchSection(musi, [church, bayan])
 
 })
 
-evM.addEventListener("click", function(event){
+evm.addEventListener("click", function(event){
    event.preventDefault()
-   switchSection(cFo, [balikBayan, Musi])
-
+   switchSection(church, [bayan, musi])
 })
+
+
+const state = {};
+const carouselList = document.getElementsByClassName(".carousel__list");
+const carouselItems = document.getElementsByClassName(".carousel__item");
+const elems = Array.from(carouselItems);
+
+carouselList.addEventListener('click', function (event) {
+  var newActive = event.target;
+  var isItem = newActive.closest(".carousel__item");
+
+  if (!isItem || newActive.classList.contains(".carousel__item_active")) {
+    return;
+  };
+  
+  update(newActive);
+});
+
+const update = function(newActive) {
+  const newActivePos = newActive.dataset.pos;
+
+  const current = elems.find((elem) => elem.dataset.pos == 0);
+  const prev = elems.find((elem) => elem.dataset.pos == -1);
+  const next = elems.find((elem) => elem.dataset.pos == 1);
+  const first = elems.find((elem) => elem.dataset.pos == -2);
+  const last = elems.find((elem) => elem.dataset.pos == 2);
+  
+  current.classList.remove('carousel__item_active');
+  
+  [current, prev, next, first, last].forEach(item => {
+    var itemPos = item.dataset.pos;
+
+    item.dataset.pos = getPos(itemPos, newActivePos)
+  });
+};
+
+const getPos = function (current, active) {
+  const diff = current - active;
+
+  if (Math.abs(current - active) > 2) {
+    return -current
+  }
+
+  return diff;
+}
