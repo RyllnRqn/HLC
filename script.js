@@ -10,7 +10,7 @@ document.addEventListener('scroll', function(){
 
 });
 
-
+/*
 const slider = document.querySelector('.container');
 let isDown = false;
 let startX;
@@ -76,17 +76,16 @@ evm.addEventListener("click", function(event){
    switchSection(church, [bayan, musi])
 })
 
-
 const state = {};
-const carouselList = document.getElementsByClassName(".carousel__list");
-const carouselItems = document.getElementsByClassName(".carousel__item");
+const carouselList = document.querySelector('.carousel__list');
+const carouselItems = document.querySelectorAll('.carousel__item');
 const elems = Array.from(carouselItems);
 
 carouselList.addEventListener('click', function (event) {
   var newActive = event.target;
-  var isItem = newActive.closest(".carousel__item");
+  var isItem = newActive.closest('.carousel__item');
 
-  if (!isItem || newActive.classList.contains(".carousel__item_active")) {
+  if (!isItem || newActive.classList.contains('carousel__item_active')) {
     return;
   };
   

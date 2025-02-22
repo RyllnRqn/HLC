@@ -311,7 +311,7 @@ header nav a{
   align-items: center;
   font-family: Arial;
 }
-.carousel__list {
+  .carousel__list {
     display: flex;
     list-style: none;
     position: relative;
@@ -320,15 +320,29 @@ header nav a{
     justify-content: center;
     perspective: 300px;
   }
+
+ .carousel img{
+    pointer-events: none;
+    width: 100px;
+    height: 100px;
+    position: relative;
+    overflow: hidden;
+    border-radius: 50%;
+    position: relative; 
+    justify-content: start;
+    align-items: start;
+    margin: 0 !important;
+    padding: 0 !important;
+ }
   
- .carousel__item {
+  .carousel__item {
     display: flex;
     align-items: center;
     justify-content: center;
     color: #fff;
     font-size: 0px;
     width: 250px;
-    height: 300px;
+    height: 350px;
     border-radius: 12px;
     box-shadow: 0px 2px 8px 0px rgba(50, 50, 50, 0.5);
     position: absolute;
