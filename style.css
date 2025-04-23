@@ -17,6 +17,7 @@ header{
     height: 90px;
     padding: 0 30px 0 10px;
     background: black;
+
 }
 
 header nav{
@@ -58,6 +59,7 @@ header nav a{
     align-items: center;
     flex-direction: column;
     z-index: 999; 
+    scale: 1;
 }
 
 .tagLine h1{
@@ -156,33 +158,23 @@ header nav a{
 
 }
 
-.member11 h1{
-
-}
-
 .member2{
-    position: relative;
+    position: flex;
     z-index: 999;
     justify-content: center;
     background-size:cover;
     height: 100vh;
     background-image: url('backgroundmembers.jpg');
-    display: grid;
-    align-items: center;
-    display: flex;
-    padding-right: 20px;
-    
-    
+    align-items: center; 
 }
 
-.member2 .member-title{
+.member-title{
     position: relative;
     justify-content: center;
     display: grid;
     font-size: 2rem;
     align-items: center;
-    gap: 50px;
-    padding: 50px;
+    height: 400px;
 }
 .member2 .member-title h1{
     font-family: Verdana, Geneva, Tahoma, sans-serif;
@@ -191,71 +183,89 @@ header nav a{
     align-items: center;
     position:relative;
     text-align: center;
-    color:bisque;
-    -webkit-text-stroke: 1px rgb(0, 145, 255);
-    width: 500px;
+    padding: 50px;
+    color:rgb(246, 239, 231);
+    
+    width: 600px;
+    height: 50px;
 
 }
 
-.member2 .member-title h2{
+.member-title h2{
     align-items: center;
     justify-content: center;
-    position: inherit;
+    position: relative;
     display: flex;
     font-family: sans-serif;
     font-size: 35px;
-
+    font-weight: 900;
+    color: transparent;
+    top: -150px;
+    -webkit-text-stroke: 1px rgba(30, 17, 2, 0.975);
+    letter-spacing: 5px;
 }
-
-
-.container{  
-    display: flex;
-    gap: 20px;
-    justify-content: center;
-    padding: 25px 0;
-    overflow-x: scroll;
-    width: 60%;
-}
-
-.container::-webkit-scrollbar{
-    display: none;
-}
-
-
-
 
 .profile{
-    text-align: center;
-    box-shadow: rgba(0, 0, 0, 0.5) 0px 4px 20px 7px;
     display: flex;
-    flex-direction: column;
-    align-items: center;
-    padding-top: 30px;
-    padding-right: 25px;
-    padding-bottom: 30px;
-    padding-left: 25px;
-    gap: 5px;
-  
+
+    justify-content: center;
+    gap: 10px;
+    overflow: hidden;
+    /*grid-template-columns: repeat(6, minmax(200px, 1fr));
+    grid-template-rows: 1fr 1fr 1fr;*/
 }
 
-.image-wrap {
-    clip-path: circle(50% at 50% 50%);
-    width: 130px;
-    height: 130px;
-  }
+.profile1 img{
+  height: 350px;
+}
 
-  .member-image {
-    max-width: 100%;
-    scale: 1.88;
-  }
-  
-  .member-name{
-        font-family: "Lobster", serif;
-        font-weight: 300;
-        font-style: normal;
-        font-size: larger;
+.profile1{
+    border: 0;
+    padding: 0;
+    margin: 0;
+    position: relative;
+    display: grid;
+    justify-content: center; 
+    h1{
+        position: absolute;
+        text-align: center;
+        width: 100%;
+        padding: 1em 0;
+        text-transform: uppercase;
+        letter-spacing: 2px;
+    }
+    button{
+        position: relative;
+        justify-content: center;
+        padding: 1em 0;
+        text-transform: uppercase;
+        letter-spacing: 2px;
+        background-color: transparent;
+        top: -50px;
+        color: white;
+    }
+}
 
-  }
+.showMember{
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    text-align: center;
+    margin: 0;
+    padding: 0;
+}
+
+.showMembers{
+    height: 50%;
+    width: 50%;
+    text-align: center;
+    margin: 0;
+    padding: 0;
+}
+
+
 
   .performances{
     position: relative;
@@ -263,7 +273,7 @@ header nav a{
     justify-content:center;
     background-size:cover;
     height: 100vh;
-    background-color: rgba(13, 223, 223, 0.467);
+    background-color: rgba(13, 204, 204, 0.608);
     display: grid;  
     text-align: center;
     gap: 100px;
@@ -304,99 +314,136 @@ header nav a{
 }
 
 
-.carousel {
-  display: flex;
-  width: 100%;
-  height: 100%;
-  align-items: center;
-  font-family: Arial;
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
 }
-  .carousel__list {
-    display: flex;
-    list-style: none;
-    position: relative;
-    width: 100%;
-    height: 300px;
-    justify-content: center;
-    perspective: 300px;
-  }
 
- .carousel img{
-    pointer-events: none;
-    width: 100px;
-    height: 100px;
-    position: relative;
-    overflow: hidden;
-    border-radius: 50%;
-    position: relative; 
-    justify-content: start;
-    align-items: start;
-    margin: 0 !important;
-    padding: 0 !important;
- }
-  
-  .carousel__item {
+
+.search-bar {
+    display: block;
+    width: 100%;
+    max-width: 300px;
+    margin: 0 auto;
+    padding: 10px;
+    font-size: 16px;
+    margin-bottom: 30px;
+    border-radius: 5px;
+    border: 1px solid #ddd;
+}
+
+.scroll-container {
     display: flex;
     align-items: center;
-    justify-content: center;
-    color: #fff;
-    font-size: 0px;
-    width: 250px;
-    height: 350px;
-    border-radius: 12px;
-    box-shadow: 0px 2px 8px 0px rgba(50, 50, 50, 0.5);
+}
+.member-grid {
+    display: flex;
+    overflow-x: auto;
+    scrollbar-width: smooth;
+    gap: 20px;
+    justify-items: center;
+    width: 1200px;
+}
+
+.member-card {
+    background-color: #fff;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+    cursor: pointer;
+    position: relative;
+    width: 300px;
+    text-align: center;
+    flex-shrink: 0;
+}
+
+/*.member-card:hover {
+    transform: scale(1.05);
+}*/
+
+.member-photo {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    border-bottom: 2px solid #ddd;
+}
+
+.member-name {
+    font-size: 18px;
+    margin: 10px 0 5px;
+}
+
+.position {
+    font-size: 14px;
+    color: #888;
+}
+
+.overlay {
     position: absolute;
-    transition: all .3s ease-in;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.6);
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+.member-card:hover .overlay {
+    opacity: 1;
+}
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 999;
+    padding-top: 60px;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0,0,0,0.5);
     
-    &:nth-child(1) {
-      background: linear-gradient(45deg, #2D35EB 0%, #904ED4 100%);
-    }
-    &:nth-child(2) {
-      background: linear-gradient(45deg, #2D35EB 0%, #fdbb2d 100%);
-    }
-    &:nth-child(3) {
-      background: linear-gradient(45deg, #2D35EB 0%, #22c1c3 100%);
-    }
-    &:nth-child(4) {
-      background: linear-gradient(45deg, #fdbb2d 0%, #904ED4 100%);
-    }
-    &:nth-child(5) {
-      background: linear-gradient(45deg, #22c1c3 0%, #904ED4 100%);
-    }
-    
-    &[data-pos="0"] {
-      z-index: 5;
-    }
-    
-    &[data-pos="-1"],
-    &[data-pos="1"] {
-      opacity: 0.7;
-      filter: blur(1px) grayscale(10%);
-    }
-    
-    &[data-pos="-1"] {
-      transform: translateX(-40%) scale(.9);
-      z-index: 4;
-    }
-    
-    &[data-pos="1"] {
-      transform: translateX(40%) scale(.9);
-      z-index: 4;
-    }
-    
-    &[data-pos="-2"],
-    &[data-pos="2"] {
-      opacity: 0.4;
-      filter: blur(3px) grayscale(20%);
-    }
-    
-    &[data-pos="-2"] {
-      transform: translateX(-70%) scale(.8);
-      z-index: 3;
-    }
-    
-    &[data-pos="2"] {
-      transform: translateX(70%) scale(.8);
-      z-index: 3;
-    }
-  }
+}
+
+.modal-content {
+    background-color: #fff;
+    margin: auto;
+    padding: 20px;
+    border-radius: 8px;
+    width: 80%;
+    max-width: 500px;
+    position: relative;
+    text-align: center;
+    gap: 20px;
+    display: grid;
+}
+
+.close {
+    color: #aaa;
+    position: absolute;
+    top: 10px;
+    right: 20px;
+    font-size: 28px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.close:hover {
+    color: #000;
+}
+
+.modal-image {
+    width: 100%;
+    height: auto;
+    max-height: 400px;
+    object-fit: cover;
+    margin-bottom: 15px;
+    border-radius: 6px;
+}

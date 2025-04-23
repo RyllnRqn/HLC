@@ -5,7 +5,7 @@ const tagLine = document.querySelector('.tag');
 document.addEventListener('scroll', function(){
    // console.log('scrolled!')
    let value = window.scrollY
-   tagLine.style.marginTop = value * 1.2 + 'px'
+   tagLine.style.marginTop = value * 1.2 + 'px';
    //butt.style.marginTop = value * 1 + 'px'
 
 });
@@ -76,46 +76,63 @@ evm.addEventListener("click", function(event){
    switchSection(church, [bayan, musi])
 })
 
-const state = {};
-const carouselList = document.querySelector('.carousel__list');
-const carouselItems = document.querySelectorAll('.carousel__item');
-const elems = Array.from(carouselItems);
 
-carouselList.addEventListener('click', function (event) {
-  var newActive = event.target;
-  var isItem = newActive.closest('.carousel__item');
-
-  if (!isItem || newActive.classList.contains('carousel__item_active')) {
-    return;
-  };
-  
-  update(newActive);
+ 
+ // Search functionality
+document.getElementById('search').addEventListener('input', function() {
+   let searchQuery = this.value.toLowerCase();
+   let members = document.querySelectorAll('.member-card');
+   
+   members.forEach(member => {
+       let name = member.querySelector('.member-name').textContent.toLowerCase();
+       let position = member.querySelector('.position').textContent.toLowerCase();
+       
+       if (name.includes(searchQuery) || position.includes(searchQuery)) {
+           member.style.display = 'block';
+       } else {
+           member.style.display = 'none';
+       }
+   });
 });
 
-const update = function(newActive) {
-  const newActivePos = newActive.dataset.pos;
+// Modal functionality
+let modal = document.getElementById("memberModal");
+let cards = document.querySelectorAll(".member-card");
+let closeModal = document.getElementsByClassName("close")[0];
 
-  const current = elems.find((elem) => elem.dataset.pos == 0);
-  const prev = elems.find((elem) => elem.dataset.pos == -1);
-  const next = elems.find((elem) => elem.dataset.pos == 1);
-  const first = elems.find((elem) => elem.dataset.pos == -2);
-  const last = elems.find((elem) => elem.dataset.pos == 2);
-  
-  current.classList.remove('carousel__item_active');
-  
-  [current, prev, next, first, last].forEach(item => {
-    var itemPos = item.dataset.pos;
+// Add click event for each member card
+cards.forEach(card => {
+   card.addEventListener('click', function() {
+       modal.style.display = "block";
+       // You can dynamically change the modal content based on the card clicked
+       let memberName = card.querySelector('.member-name').textContent;
+       let pos = card.querySelector('.position').textContent;
+       let bio = card.querySelector('.biography').textContent;
+       let pic = card.querySelector('img').src;
+       modal.querySelector('h2').textContent = memberName +" - " + pos; // Customize this as needed
+       modal.querySelector('p').textContent = bio;
+       modal.querySelector('img').src = pic;
+   });
+});
 
-    item.dataset.pos = getPos(itemPos, newActivePos)
-  });
+// Close modal when the close button is clicked
+closeModal.addEventListener('click', function() {
+   modal.style.display = "none";
+});
+
+// Close modal if clicked outside of the modal content
+window.onclick = function(event) {
+   if (event.target == modal) {
+       modal.style.display = "none";
+   }
 };
 
-const getPos = function (current, active) {
-  const diff = current - active;
-
-  if (Math.abs(current - active) > 2) {
-    return -current
-  }
-
-  return diff;
-}
+function scrollLeft() {
+   const container = document.getElementById('members');
+   container.scrollBy({ left: -100, behavior: 'smooth' });
+ }
+ 
+ function scrollRight() {
+   const container = document.getElementById('members');
+   container.scrollBy({ left: 100, behavior: 'smooth' });
+ }

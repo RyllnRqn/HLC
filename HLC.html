@@ -10,6 +10,9 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Lobster&family=Style+Script&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lobster&family=Style+Script&family=Vujahday+Script&display=swap" rel="stylesheet">
     <title>H Lopez CFO Choir
     </title>
 </head>
@@ -59,19 +62,84 @@
     </section>
     <section class="member2">
         <div class="member-title">
-            <h1>INC Ambassadors of Faith, Love and Hope</br> H. Lopez Blvd.</h1>
+            <h1>INC Ambassadors of Faith, Love and Hope</h1>
+        <h1 style="font-family:cursive; position: relative; top: -120px; color: gold; font-family: Style Script, cursive; font-weight: 400; font-size: normal; font-size: 100px;"> H. Lopez Blvd.</h1>
             <h2>Members</h2>
         </div>
-        <div class="carousel">
-            <ul class="carousel__list">
-              <li class="carousel__item" data-pos="-2">1</li>
-              <li class="carousel__item" data-pos="-1">2</li>
-              <li class="carousel__item" data-pos="0"><img src="Uli.jpg" disabled>3</li>
-              <li class="carousel__item" data-pos="1">4</li>
-              <li class="carousel__item" data-pos="2">5</li>  
-            </ul>
-          </div>
-            
+        <div class="container">
+            <input type="text" id="search" placeholder="Search choir members..." class="search-bar">
+            <div class="member-grid">
+                <!-- Example of a choir member card -->
+                <div class="member-card">
+                    <img src="Uli.jpg" alt="Choir Member 1" class="member-photo">
+                    <h3 class="member-name">Uly</h3>
+                    <p class="position">Tenor</p>
+                    <div class="overlay">
+                        <p>Click for more info</p>
+                    </div>
+                    <p class="biography" style="display: none;">Nilalakasan ko para maglakas rin sila.</p>
+                </div>
+                <div class="member-card">
+                    <img src="conductor.JPG" alt="Choir Member 2" class="member-photo">
+                    <h3 class="member-name">Ate</h3>
+                    <p class="position">Soprano</p>
+                    <div class="overlay">
+                        <p>Click for more info</p>
+                    </div>
+                    <p class="biography" style="display: none;">Hikab, hikab, tulak tyan, ire!</p>
+                </div>
+                <div class="member-card">
+                    <img src="pusa.png" alt="Choir Member 3" class="member-photo">
+                    <h3 class="member-name">Muning</h3>
+                    <p class="position">Meow</p>
+                    <div class="overlay">
+                        <p>Click for more info</p>
+                    </div>
+                    <p class="biography" style="display: none;">Meow meow meow, meow!</p>
+                </div>
+                <div class="member-card">
+                    <img src="duWendy.jpg" alt="Choir Member 4" class="member-photo">
+                    <h3 class="member-name">Wendy</h3>
+                    <p class="position">Alto</p>
+                    <div class="overlay">
+                        <p>Click for more info</p>
+                    </div>
+                    <p class="biography" style="display: none;">Meow meow meow, meow!</p>
+                </div>
+                <div class="member-card">
+                    <img src="Luiswis.jpg" alt="Choir Member 5" class="member-photo">
+                    <h3 class="member-name">Luis</h3>
+                    <p class="position">Soprano</p>
+                    <div class="overlay">
+                        <p>Click for more info</p>
+                    </div>
+                    <p class="biography" style="display: none;">Meow meow meow, meow!</p>
+                </div>
+                <div class="member-card">
+                    <img src="BDO.jpg" alt="Choir Member 6" class="member-photo">
+                    <h3 class="member-name">Bido</h3>
+                    <p class="position">Tenor</p>
+                    <div class="overlay">
+                        <p>Click for more info</p>
+                    </div>
+                    <p class="biography" style="display: none;">Meow meow meow, meow!</p>
+                </div>
+                
+                
+                <!-- Add more member cards here -->
+                <!-- Add additional member cards in similar format -->
+            </div>
+        </div>
+    
+        <!-- Modal -->
+        <div id="memberModal" class="modal">
+            <div class="modal-content">
+                <span class="close">&times;</span>
+                <h2>Name - voice</h2>
+                <p>Biography</p>
+                <!-- More details can go here -->
+                <img class="modal-image" src="">
+            </div>
         </div>
     </section>
     <section class="performances">

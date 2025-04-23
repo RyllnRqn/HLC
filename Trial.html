@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Choir Members</title>
+    <link rel="stylesheet" href="trial.css">
+</head>
+<body>
+    <input type="text" id="search" placeholder="Search choir members..." class="search-bar">
+    <div class="container scroll-container">
+        <div class="member-grid">
+            <!-- Example of a choir member card -->
+            <div class="member-card">
+                <img src="Uli.jpg" alt="Choir Member 1" class="member-photo">
+                <h3 class="member-name">Uly</h3>
+                <p class="position">Tenor</p>
+                <div class="overlay">
+                    <p>Click for more info</p>
+                </div>
+                <p class="biography" style="display: none;">Nilalakasan ko para maglakas rin sila.</p>
+            </div>
+            <div class="member-card">
+                <img src="conductor.JPG" alt="Choir Member 2" class="member-photo">
+                <h3 class="member-name">Ate</h3>
+                <p class="position">Soprano</p>
+                <div class="overlay">
+                    <p>Click for more info</p>
+                </div>
+                <p class="biography" style="display: none;">Hikab, hikab, tulak tyan, ire!</p>
+            </div>
+            <div class="member-card">
+                <img src="pusa.png" alt="Choir Member 3" class="member-photo">
+                <h3 class="member-name">Muning</h3>
+                <p class="position">Meow</p>
+                <div class="overlay">
+                    <p>Click for more info</p>
+                </div>
+                <p class="biography" style="display: none;">Meow meow meow, meow!</p>
+            </div>
+            <div class="member-card">
+                <img src="duWendy.jpg" alt="Choir Member 4" class="member-photo">
+                <h3 class="member-name">Wendy</h3>
+                <p class="position">Alto</p>
+                <div class="overlay">
+                    <p>Click for more info</p>
+                </div>
+                <p class="biography" style="display: none;">Meow meow meow, meow!</p>
+            </div>
+            <div class="member-card">
+                <img src="Luiswis.jpg" alt="Choir Member 5" class="member-photo">
+                <h3 class="member-name">Luis</h3>
+                <p class="position">Soprano</p>
+                <div class="overlay">
+                    <p>Click for more info</p>
+                </div>
+                <p class="biography" style="display: none;">Meow meow meow, meow!</p>
+            </div>
+            <div class="member-card">
+                <img src="BDO.jpg" alt="Choir Member 6" class="member-photo">
+                <h3 class="member-name">Bido</h3>
+                <p class="position">Tenor</p>
+                <div class="overlay">
+                    <p>Click for more info</p>
+                </div>
+                <p class="biography" style="display: none;">Meow meow meow, meow!</p>
+            </div>
+            
+            
+            <!-- Add more member cards here -->
+            <!-- Add additional member cards in similar format -->
+        </div>
+    </div>
+
+    <!-- Modal -->
+    <div id="memberModal" class="modal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <h2>Name - voice</h2>
+            <p>Biography</p>
+            <!-- More details can go here -->
+            <img class="modal-image" src="">
+        </div>
+    </div>
+
+    <script src="trial.js"></script>
+</body>
+</html>
