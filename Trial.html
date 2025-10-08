@@ -5,6 +5,20 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Choir Members</title>
     <link rel="stylesheet" href="trial.css">
+    <style>
+        body {
+          height: 2000px; /* make the page scrollable */
+          margin: 0;
+        }
+        #scalingText {
+          position: fixed;
+          top: 50px;
+          left: 50%;
+          transform: translateX(-50%);
+          font-size: 32px;
+          transition: transform 0.1s ease-out;
+        }
+      </style>
 </head>
 <body>
     <input type="text" id="search" placeholder="Search choir members..." class="search-bar">
@@ -71,6 +85,18 @@
             <!-- Add additional member cards in similar format -->
         </div>
     </div>
+
+    <div id="scalingText">Scroll to Scale Me</div>
+
+<div class="connt">
+  <div class="content1 left" id="box1">
+    Content from the Left
+  </div>
+
+  <div class="content1" id="box2">
+    Content from the Right
+  </div>
+</div>
 
     <!-- Modal -->
     <div id="memberModal" class="modal">

@@ -56,3 +56,41 @@ function scrollLeft() {
     const container = document.getElementById('members');
     container.scrollBy({ left: 100, behavior: 'smooth' });
   }
+
+
+  const textElement = document.getElementById("scalingText");
+
+window.addEventListener("scroll", () => {
+  // Get scroll position
+  const scrollY = window.scrollY;
+
+  // Scale based on scroll position; adjust divisor to control sensitivity
+  const scale = 1 + scrollY / 500;
+
+  // Apply the scale
+  textElement.style.transform = `translateX(-50%) scale(${scale})`;
+});
+
+
+function isInViewport(el) {
+    const rect = el.getBoundingClientRect();
+    return (
+      rect.top < window.innerHeight &&
+      rect.bottom >= 0
+    );
+  }
+
+  const box1 = document.getElementById('box1');
+  const box2 = document.getElementById('box2');
+
+  function checkScroll() {
+    if (isInViewport(box1)) {
+      box1.classList.add('show');
+    }
+    if (isInViewport(box2)) {
+      box2.classList.add('show');
+    }
+  }
+
+  window.addEventListener('scroll', checkScroll);
+  window.addEventListener('load', checkScroll);

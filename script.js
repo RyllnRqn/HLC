@@ -10,6 +10,21 @@ document.addEventListener('scroll', function(){
 
 });
 
+const textElement = document.getElementById("tag");
+
+window.addEventListener("scroll", () => {
+  // Get scroll position
+  const scrollY = window.scrollY;
+
+  // Scale based on scroll position; adjust divisor to control sensitivity
+  const scale = 1 + scrollY / 500;
+
+  // Apply the scale
+  textElement.style.transform = `scale(${scale})`;
+});
+
+
+
 /*
 const slider = document.querySelector('.container');
 let isDown = false;
@@ -51,6 +66,30 @@ function hideChurch(){
 
    document.getElementById("church").style.display = "none";
 }*/
+
+function isInViewport(el) {
+   const rect = el.getBoundingClientRect();
+   return (
+     rect.top < window.innerHeight &&
+     rect.bottom >= 0
+   );
+ }
+
+ const box1 = document.getElementById('cont');
+ const box2 = document.getElementById('abouthlc');
+
+ function checkScroll() {
+   if (isInViewport(box1)) {
+     box1.classList.add('show');
+   }
+   if (isInViewport(box2)) {
+     box2.classList.add('show');
+   }
+ }
+
+ window.addEventListener('scroll', checkScroll);
+ window.addEventListener('load', checkScroll);
+
 
 function switchSection(showSection, hideSection){
    hideSection.forEach((section) => {
