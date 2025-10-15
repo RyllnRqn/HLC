@@ -291,7 +291,11 @@ header nav a{
     justify-content: center;
     align-items: center;
     justify-items: center;
-    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-columns: 1fr 1fr;
+    border: #000;
+    border-radius: 9px;
+    border-color: #000;
+    border-style: dashed;
 }
 
 .performances li{
@@ -302,22 +306,51 @@ header nav a{
     font-weight: 600;
     font-size: x-large;
     font-style: oblique;
-    justify-items: center;
+    justify-items: left;
     align-items: center;
     padding: 10px;
+
 }
 
 li:hover{
     color: white;
 }
 
+.Navi li{
+    background-color: #ffdfb9;
+    border: #000;
+    border-radius: 9px;
+    border-color: #000;
+    border-style: dashed;
+    
+}
 
-.performances img{
-    height: 600px;
-    width: max-content;
+.taas h2{
+    background-color: #ffdfb9;
+}
+.taas{
+    display: grid;
+    gap: 20px;
+    height: 500px;
     justify-content: center;
     align-items: center;
     justify-items: center;
+    border: #000;
+    border-radius: 9px;
+    border-color: #000;
+    border-style: dashed;
+}
+
+.performances img{
+    height: 400px;
+    width: 500px;
+    
+}
+
+.perf{
+    display: grid;
+    justify-items: center;
+    align-items: center;
 }
 
 .p-details{
