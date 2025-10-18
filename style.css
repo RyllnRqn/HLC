@@ -7,6 +7,7 @@
 
 body{
     position: relative;
+    overflow-x: hidden;
     
 }
 
@@ -514,4 +515,75 @@ li:hover{
 
 .gform iframe{
     height: 50vh;
+}
+
+
+
+@media screen and (max-width: 600px) {
+ body{
+    max-width: 375px;
+    padding: 0;
+    margin: 0;
+    position: relative;
+    overflow-x: hidden;
+    height: 600px;
+ }
+ .section1{
+    display: grid;
+    justify-items: center;
+    align-items: center;
+    height: 600px;
+    
+ }
+.tagLine h1{
+    font-size: xx-large;
+    position: relative;
+    top: -100px;
+    width: 200px;
+    justify-items: center;
+    text-align: center;
+}
+
+.about img{
+    
+}
+
+.about{
+    overflow: hidden;
+    height: 600px;
+    padding: 0px;
+    margin: 0px;
+
+}
+
+.con-about{
+    height: 500px;
+    display: grid;
+    justify-content: center;
+    justify-items:left;
+    align-items: left;
+    margin: 0;
+    padding: 0;
+    border: #000;
+    border-style: dashed;
+    border-color: black;
+    left: -45px;
+    text-align: justify;
+    font-size: smaller;
+}
+
+.con-about h1{
+    text-align: center;
+}
+
+.con-about img{
+    height: 400px;
+    width: 300px;
+}
+
+
+.member2{
+    overflow-x: hidden;
+}
+
 }

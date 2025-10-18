@@ -175,3 +175,4 @@ function scrollLeft() {
    const container = document.getElementById('members');
    container.scrollBy({ left: 100, behavior: 'smooth' });
  }
+
