@@ -18,6 +18,11 @@ header{
     height: 90px;
     padding: 0 30px 0 10px;
     background: black;
+    position: sticky;
+    top: 0;
+    overflow: hidden;
+    z-index: 9999;
+
 
 }
 
@@ -94,46 +99,167 @@ header nav a{
 
 
 .about{
-    position: relative;
-    padding: 100px;
+    height: 70vh;
     z-index: 999;
     background: #a4193d;
     color: #ffdfb9;
+    padding: min(5em, 8%);
+    display: grid;
+    margin: 0;
+}
 
+
+
+
+
+.con {
+    height: 50vh;
+    display: grid;
+    position: relative;
+    justify-content: center;
+    justify-items: center;
+    padding: 0;
+    margin: 0;
 }
 
 .about h1{
-    font-size: 100px;
-}
-
-.show {
-    opacity: 1;
-    transform: translateX(0);
-}
-
-.left{
-    transform: translateX(-100px);
-}
-.right{
-    transform: translatex(100px);
-}
-
-.con-about{
-    height: 70vh;
-    display: flex;
+    font-size: 50px;
     position: relative;
-    justify-content: space-evenly; 
+    letter-spacing: 1px;
+}
+
+
+.para ul{
+    display: flex;
+    height: 150px;
+    justify-content:space-around;
+    letter-spacing: 1px;
+    list-style: none;
+    gap: 100px;
+    padding: 0;  
+}
+
+.para li{
+    gap: 50px;
+    width: fit-content;
+    padding-bottom: 0;
+    
+
+}
+
+.para{
+    margin-top: -80px;
+    padding-bottom: 0;
+}
+
+
+/*
+.vis { grid-area: una;}
+.mis { grid-area: pan;}
+.vismis { grid-area: ika;}
+
+.vision{
+    display: grid;
+    grid-template-areas: 
+    'una ika ika'
+    'una ika ika'
+    'pan ika ika'
+    'pan ika ika';
+    padding: 0;
+    margin: 0;
+    gap: 10px;
+}
+*/
+
+.vision{
+    display: grid;
+    grid-template-columns: auto auto;
+    grid-template-rows: auto auto;
+    gap: 10px;
+    letter-spacing: 1px;
+    margin-top: -150px;
+}
+
+.autoShow{
+    animation: autoShowAnimation both;
+    animation-timeline: view(70% 5%);
+}
+
+@keyframes autoShowAnimation{
+    from{
+        opacity: 0;
+        transform: translateY(200px) scale(0.3);
+    }
+
+    to{
+        opacity: 1;
+        transform: translateY(0) scale(1);
+    }
+}
+
+.show{
+    animation: showAnimation both;
+    animation-timeline: view(70% 5%);
+}
+
+@keyframes showAnimation{
+    from{
+        opacity: 0;
+        transform: translateX(200px) scale(0.3);
+    }
+
+    to{
+        opacity: 1;
+        transform: translateX(0) scale(1);
+    }
+}
+
+.auto{
+    animation: autoAnimation both;
+    animation-timeline: view(70% 5%);
+}
+
+@keyframes autoAnimation{
+    from{
+        opacity: 0;
+        transform: translateX(-200px) scale(0.3);
+    }
+
+    to{
+        opacity: 1;
+        transform: translateX(0) scale(1);
+    }
+}
+
+
+.vismis{
+    grid-row: 1 / span 2;
+    height: 300px;
+    margin: 0;
+    padding: 10px;
+}
+
+.vismis ul{
+    text-align: left;
+    width: 100%;
+    letter-spacing: 2px;
+}
+
+
+.vision div{
+    color:#a4193d;
+    width: 550px;
+    border-radius: 10px;
+    background-color:#ffdfb9ed;
+    justify-items: center;
+    text-align: center;
+    justify-content: center;
+    display: grid;
+    text-shadow: rgb(24, 19, 19) 0px .1px;
+    padding: 20px;
     
 }
 
-.cont {
-    padding-right: 100px;
-    justify-content: center;
-    align-items: center;
-    transform: translateX(100px); /* default slide in from right */
-    transition: transform 1s ease-out, opacity 1s ease-out;
-    
-}
 
 .member{
     position: relative;
@@ -313,7 +439,7 @@ header nav a{
 
 }
 
-li:hover{
+.performance li:hover{
     color: white;
 }
 
@@ -521,18 +647,28 @@ li:hover{
 
 @media screen and (max-width: 600px) {
  body{
-    max-width: 375px;
+    max-width: 600px;
     padding: 0;
     margin: 0;
     position: relative;
     overflow-x: hidden;
-    height: 600px;
+    height: 50vh;
+    padding-top: 10;
  }
+
+header{
+    max-width: 600px;
+    overflow-x: hidden;
+    height: 10%;
+
+    
+}
  .section1{
     display: grid;
     justify-items: center;
     align-items: center;
-    height: 600px;
+    height: 90vh;
+    padding-top: 50px;
     
  }
 .tagLine h1{
@@ -544,45 +680,77 @@ li:hover{
     text-align: center;
 }
 
-.about img{
-    
+.tagLine button{
+    width: 150px;
+    font-weight: 600;
 }
 
 .about{
-    overflow: hidden;
-    height: 600px;
-    padding: 0px;
-    margin: 0px;
-
-}
-
-.con-about{
-    height: 500px;
-    display: grid;
-    justify-content: center;
-    justify-items:left;
-    align-items: left;
+    display: flex;
+    flex-direction: column;
+    padding: 0 30px;
+    padding-top: 50px;
     margin: 0;
-    padding: 0;
-    border: #000;
-    border-style: dashed;
-    border-color: black;
-    left: -45px;
-    text-align: justify;
-    font-size: smaller;
-}
-
-.con-about h1{
+    align-items: center;
     text-align: center;
+    height: 90vh;
 }
 
-.con-about img{
-    height: 400px;
-    width: 300px;
+.con{
+   
 }
+
+.para{
+    margin-top: 0;
+    font-size: 14px;
+}
+.para ul{
+    justify-content: center;
+    text-align: justify;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    margin-top:  20px;
+    margin-bottom: 10px;
+}
+
+.vision{
+    display: flex;
+    flex-direction: column;
+    margin-top: 10px;
+    
+}
+
+.vision div{
+    width: 320px;
+    font-size: 14px;
+    padding: 0;
+    margin: 0;
+    justify-content: center;
+    align-items: center;
+}
+
+.auto{
+    height: 120px;
+}
+
+.show{
+    height: 170px;
+    
+}
+
 
 
 .member2{
+    overflow-x: hidden;
+}
+
+.member{
+    max-width: 600px;
+    overflow-x: hidden;
+}
+.performances{
+    max-width: 600px;
     overflow-x: hidden;
 }
 
