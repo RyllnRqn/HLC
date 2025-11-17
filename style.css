@@ -45,8 +45,8 @@ header nav a{
 }
 
 .section1 {
-    background: url('choir1.jpg')center;
-    height: 100vh;
+    
+    height: 100dvh;
     width: 100%;
     color: white;
     position: relative;
@@ -54,6 +54,9 @@ header nav a{
     justify-content: center;
     align-items: center;
     flex-direction: column;
+    background: url('choir1.jpg')center;
+    background-repeat: no-repeat;
+    background-size: cover;
     overflow: hidden;
 }
 
@@ -79,7 +82,7 @@ header nav a{
     font-weight: 600;
     font-size: 50px;
     font-style: normal;
-    z-index: -1;
+    z-index: -99;
     transition: transform 0.1s ease-out;
     
 }
@@ -93,7 +96,7 @@ header nav a{
     box-shadow: 1px 1px 2px rgb(97, 96, 96);
     background-color: yellow;
     color:rgb(94, 23, 161);
-    z-index: -1;
+    z-index: -99;
     
 }
 
@@ -261,13 +264,13 @@ header nav a{
 }
 
 
-.member{
+.conductor{
     position: relative;
     margin: 0 100px;
     padding: 0 100px;
     z-index: 999;
     background: #fe98c8; 
-    height: 100vh;
+    height: 80dvh;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -276,7 +279,7 @@ header nav a{
     
 }
 
-.member1 img{
+.conductor-profile img{
     height: 50vh;
     border-radius: 10px;
     border-style: solid;
@@ -286,22 +289,24 @@ header nav a{
     
 }
 
-.member1 {
-    display: flex;
-    position: relative;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
-    gap: 20px;
-    
+
+
+.conductor-detail {
+   display: flex;
+   flex-direction: column;
+   gap: 50px;
+   margin: 0;
+   padding: 0;
+   height: 400px;
 }
 
-.member11 {
-   border-style: solid;
-   border-color: black;
-   border-width: 10px;
-   display:flex;
-   flex-wrap: wrap;
+.conductor-profile h1{
+    position: relative;
+    top: -100px;
+    justify-content: center;
+    text-align: center;
+    color:#ffdfb9;
+    text-shadow: 2px 2px 5px #fe98c8;
 
 }
 
@@ -689,12 +694,16 @@ header{
     display: flex;
     flex-direction: column;
     padding: 0 30px;
-    padding-top: 50px;
+    padding-top: 20px;
     margin: 0;
     align-items: center;
     text-align: center;
-    height: 90vh;
+    height: 90dvh;
+    padding-bottom: 20px;
+    gap: 5px;
 }
+
+
 
 .con{
    
@@ -722,9 +731,9 @@ header{
 }
 
 .vision div{
-    width: 320px;
+    width: 400px;
     font-size: 14px;
-    padding: 0;
+    padding: 0 10px;
     margin: 0;
     justify-content: center;
     align-items: center;
@@ -754,4 +763,55 @@ header{
     overflow-x: hidden;
 }
 
+.conductor{
+    height: 90dvh;
+    display: grid;
+    background-image: url('conductor.JPG');
+    background-size: cover;
+    background-repeat: no-repeat;
+    width: 100%;
+    margin: 0;
+    overflow: hidden;
+    color: rgb(245, 246, 238);
+    padding: 0;
+    justify-content: center;
+    text-align: center;
 }
+
+.conductor-profile h1{
+    position: relative;
+    top: 60px;
+    font-size: 60px;
+}
+
+.conductor-profile h2{
+    position: relative;
+    top: 50px;
+
+}
+
+.conductor-profile img{
+    display: none;
+}
+
+.conductor-detail h1{
+    display: none;
+}
+
+.conductor-detail{
+    color: #efeff4;
+    padding: 0 30px;
+    text-align: justify;
+    text-shadow: 1px 2px 1px rgb(41, 9, 251);
+    top: 70px;
+    position: relative;
+    font-weight: 600;
+}
+
+
+
+}
+
+
+
+/**992px laptops/desktop and 1200px for extra-large

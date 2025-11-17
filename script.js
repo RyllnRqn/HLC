@@ -5,7 +5,7 @@ const tagLine = document.querySelector('.tag');
 document.addEventListener('scroll', function(){
    // console.log('scrolled!')
    let value = window.scrollY
-   tagLine.style.marginTop = value * 1.2 + 'px';
+   tagLine.style.marginTop = value * 1.1 + 'px';
    //butt.style.marginTop = value * 1 + 'px'
 
 });
@@ -17,7 +17,7 @@ window.addEventListener("scroll", () => {
   const scrollY = window.scrollY;
 
   // Scale based on scroll position; adjust divisor to control sensitivity
-  const scale = 1 + scrollY / 500;
+  const scale = 1 + scrollY / 800;
 
   // Apply the scale
   textElement.style.transform = `scale(${scale})`;
